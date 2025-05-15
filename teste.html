@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo Handlebars.js</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+</head>
+<body>
+
+  <div id="conteudo"></div>
+
+  <script id="template" type="text/x-handlebars-template">
+    <h1>{{titulo}}</h1>
+    <p>{{mensagem}}</p>
+  </script>
+
+  <button onclick="atualizarTexto()">Alterar Texto</button>
+
+  <script>
+    // Dados que queremos passar para o template
+    var dados = {
+      titulo: "Texto Inicial",
+      mensagem: "Esta é uma mensagem de exemplo usando Handlebars."
+    };
+
+    // Compilar o template
+    var source = document.getElementById("template").innerHTML;
+    var template = Handlebars.compile(source);
+
+    // Função para renderizar o template com dados
+    function renderizarTemplate() {
+      var html = template(dados); // Aplicar dados no template
+      document.getElementById("conteudo").innerHTML = html; // Exibir o HTML gerado
+    }
+
+    // Chamar a renderização inicial
+    renderizarTemplate();
+
+    // Função para atualizar os dados e re-renderizar o template
+    function atualizarTexto() {
+      dados.titulo = "Novo Título";
+      dados.mensagem = "Texto alterado dinamicamente!";
+      renderizarTemplate(); // Atualizar o conteúdo com novos dados
+    }
+  </script>
+
+</body>
+</html>

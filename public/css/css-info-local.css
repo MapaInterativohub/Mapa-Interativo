@@ -1,0 +1,60 @@
+.caixa-info-local{
+    margin: 5px;
+    display: flex;
+    background-color: aquamarine;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    min-height: 30px;
+    gap: 5px;
+    border-radius: 15px;
+    padding: 10px;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+.div-info-local{
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+.img-info{
+    width: 7rem;
+}
+.endereco-info{
+    width: auto;
+    background-color: azure;
+    text-align: justify;
+    align-items:baseline;
+}
+.text-titilo-info , .text-enreco-info{
+    border: 0;
+    padding: 2px 10px;
+    margin: 0;
+}
+.text-titilo-info{
+    font-size: 1rem;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+}
+.text-enreco-info{
+    font-size: 0.7rem;
+    font-family: Arial;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+}

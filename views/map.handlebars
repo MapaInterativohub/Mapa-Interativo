@@ -1,0 +1,66 @@
+<div class="main">
+    <div id="map">
+    <div id="base_cima">
+        <div class="botao-pequisa">
+        <div class="btn-menu" id="btn-menu">
+            <button class="myButton-m" onclick="botao_menu()">🔍</button>
+        </div>
+        <div class="caixa-pesquisa">
+            <input type="text" placeholder="Pesquisar..." />
+            <button >🔍</button>
+        </div>
+        </div>
+        <div class="caixa-de-filtros">
+        <button class="myButton" onclick = "filtrarLocais('Estudos')"><img src="/img/lendo.png" alt="Ico Estudo" class="img-filtro"> Estudos</button>
+        <button class="myButton" onclick = "filtrarLocais('Trabalho')"><img src="/img/servico.png" alt="Ico Trabalho" class="img-filtro"> Trabalho</button>
+        <button class="myButton" onclick = "filtrarLocais('Doação')"><img src="/img/doacao.png" alt="Ico Doação" class="img-filtro"> Doação</button>
+        <button class="myButton" onclick = "filtrarLocais('todos')"><class="img-filtro"> Todos</button>
+        </div>
+    </div>
+    <div id="modalDetalhes" class="modal" style="display: none;">
+      <div class="modal-content">
+        <div class="text_popup" id="txt_popup_heder">
+            <h2>Projeto Casa Acolher - Vila Velha</h2>
+        </div>
+        <img src="./img/ExemploDePopup.jpeg" alt="Imagem do local" id="img_popup" style="text-align: center;">
+        <div class="text_popup" id="txt_popup_base">
+            <p><strong>Horário de Funcionamento:</strong><br>Segunda a sexta-feira: 08h00 às 17h<br>Sábados: 09h00 às 13h</p>
+            <p><strong>Localização:</strong><br>Rua dos Girassóis, 250, Bairro Praia da Costa, Vila Velha - ES</p>
+            <p><strong>Telefone:</strong> (27) 3265-7890</p>
+            <p><strong>Descrição:</strong> O Projeto Casa Acolher é uma instituição dedicada a prestar apoio...</p>
+        </div>
+        <div class="buton">
+            <button class="myButton" id="bts_popupA">Adiciona Favoritos</button>
+            <button class="myButton" id="bts_popupB">Fechar</button>
+        </div>
+      </div>
+    </div>
+    <div class="aba-menu" id="aba-menu">
+        <h1 id="perfio" class="titulo-menu" style="display: none;">Meu Perfio</h1>
+        <h1 id="hitorico" class="titulo-menu" style="display: none;">Historico</h1>
+        <h1 id="locais" class="titulo-menu" style="display: none;">Meus Locais</h1>
+        <div class="info">
+        <div class="caixa-info-local">
+            <div class="div-info-local">
+            <img src="/img/info-img.jpg" alt="Imagem do local" class="img-info">
+            </div>
+            <div class="endereco-info">
+            <h1 class="text-titilo-info">
+                TESTE LOCAL 
+            </h1>
+            <h2 class="text-enreco-info">
+                TESTE ENDERECE RUA NÃO DEFINIDO CASA NÃO DEFINIDO
+            </h2>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="menu-container" id="menu-container">
+        <button class="myButton-m"  onclick="btn_click(this,'perfio')"><img src="/img/perfil.png" alt="Ico Perfio" class="img-mnu"></button>
+        <button class="myButton-m"  onclick="btn_click(this,'hitorico')"><img src="/img/historia.png" alt="Ico Historico" class="img-mnu"></button>
+        <button class="myButton-m"  onclick="btn_click(this,'locais')"><img src="/img/salvar.png" alt="Ico Locais" class="img-mnu"></button>
+    </div>
+    </div>
+</div>
+{{!-- <script src="/js/script.js"></script>
+<script src="/js/script-btn-menu.js"></script> --}}

@@ -1,0 +1,299 @@
+body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+
+.modal {
+  display: flex;
+  display:block;
+  position: absolute;
+  background: #dadada;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 90%;
+  height: auto;                /* ativa o flexbox */
+  justify-content: center;     /* alinha horizontalmente */
+  align-items: center;         /* alinha verticalmente */
+  text-align: center;
+  padding: 10px;
+  border-radius: 15px;
+}
+#img_popup{
+  width: 70%;
+}
+.text_popup{
+  display: grid;
+  text-align: left;
+  margin: 10px;
+}
+.text_popup p{
+  margin: 0; padding: 0;
+}
+.buton{
+  display: flex;
+}
+
+#map {
+  margin: 0px; padding: 0; overflow: hidden;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+#base_cima{
+  align-self:top;
+  position: relative;
+  z-index: 1000;
+  /* background-color: rgb(0, 255, 0); */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5px;
+  gap: 5px;
+}
+
+#menu-container{
+  position: fixed; bottom: 0; left: 0; width: 100%; background: #eee; padding: 5px; text-align: center;
+  height: 30px;
+  z-index: 10000;
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+
+}
+#text{
+  display: none;
+}
+#base_menu{
+  display: none;
+}
+
+/* estilização de botoes */
+.img-filtro{
+  width: 0.9rem;
+  padding: 0px 5px;
+}
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #ececec;
+	background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+	background-color:#f9f9f9;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+  padding: 6px 6px;
+	font-size:0.6rem;
+	font-weight:bold;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+	background-color:#e9e9e9;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.img-mnu{
+  width: 1rem;
+}
+
+.myButton-m {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	/* background:linear-gradient(to bottom, #cccccc 5%, #e6e6e6 100%); */
+	background-color:rgb(192, 192, 192);
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+  padding: 6px 15px;
+	font-size:0.7rem;
+	font-weight:bold;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+  width: 90%;
+}
+.myButton-m:hover {
+	/* background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%); */
+	background-color:#dfdfdf;
+}
+.myButton-m:active {
+	position:relative;
+	top:1px;
+}
+
+/* estilização de  caixa de pesquisa */
+
+.caixa-pesquisa {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  padding: 5px;
+  /* max-width: 400px; */
+  width: 100%;
+}
+
+.caixa-pesquisa input {
+  border: none;
+  padding: 4px 10px;
+  outline: none;
+  font-size: 0.6rem;
+  border-radius: 8px 0 0 8px;
+  width: 100%;
+  color: #666666;
+}
+
+.caixa-pesquisa button {
+  border: none;
+  color: white;
+  padding: 4px 10px;
+  font-size: 0.6rem;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+}
+
+/* stilo caixa de filtros */
+.caixa-de-filtros{
+  display: flex;
+  width: 100%;
+  max-width: 400px;
+  gap: 5px;
+  overflow-x: auto;
+}
+.btn-menu{
+  display: none;
+}
+.botao-pequisa{
+  display: flex;
+  flex-wrap: wrap;
+  /* background-color: #962a2a; */
+  max-width: 400px;
+  width: 500px;
+}
+.aba-menu{
+  position: fixed; bottom: 40px; left: 0; width: 98%; background: #eee; padding: 5px; text-align: center;
+  display: none;
+  z-index: 10000;
+  height: 72%;
+  background-color: rebeccapurple;
+  border-radius: 10px 10px 0px 0px;
+}
+@media (min-width: 700px) {
+  .botao-pequisa{
+    width: 350px;
+  }
+  .botao-pequisa{
+    display: flex;
+    width: auto;
+  }
+  .caixa-pesquisa {
+    max-width: 250px;
+  }
+  .btn-menu{
+    display: block;
+    padding: 5px;
+    position: absolute;
+    z-index: 10000;
+    top: -4px;
+    left: -67px;
+    background-color: #ffffff;
+    width: 52px;
+    height: 52px;
+    border-radius: 30px 30px 30px 30px;
+  }
+  .aba-menu{
+    position: absolute; background: #eee; padding: 5px; text-align: center;
+    bottom: 0px;
+    display: none;
+    z-index: 10000;
+    height: 100%;
+    width: 300px;
+  }
+  #menu-container{
+    margin: 0;
+    padding: 0;
+    position: absolute; top: 62px; left: 0; background: #ffffff; text-align: center;
+    height: 160px;
+    left: 5px;
+    display: none;
+    width: 52px;
+    padding: 5px;
+    border-radius: 0% 0% 30px 30px;
+  
+  }
+  .caixa-de-filtros{
+    display: flex;
+    max-width: 400px;
+    min-width: 100px;
+    gap: 5px;
+    justify-self:end;
+  }
+  #base_cima{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10px 0px 0px 72px ;
+  }
+  .myButton-m{
+    padding: 0px;
+    height: 50px;
+    width: 50px;
+    font-size:0.3rem;
+    margin: 1px 1px;
+    border-radius: 50%;
+  }
+  .myButton{
+    font-size:0.9rem;
+  }
+  .modal{
+    width: auto;
+  }
+  .modal .modal-content{
+    display: grid;
+    grid-column: 1fr 1fr;
+    grid-template-areas: 
+    "img header1"
+    "img header2"
+    "img btn";
+    padding: 10px;
+    justify-items: stretch;
+    align-items: stretch;
+    gap: 10px;
+  }
+  #txt_popup_base{
+    grid-area: header2;
+  }
+  #txt_popup_heder{
+    grid-area: header1;
+ 
+  }
+  #img_popup{
+    grid-area:img;
+    width: max-content;
+    text-align: center;
+  }
+  .buton{
+    grid-area:btn;
+    gap: 10px;
+    width: auto;
+  }
+  #bts_popup #bts_popup{
+    width: auto;
+  }
+
+}
+
+.ativo{
+  background-color: #dadada;
+}
